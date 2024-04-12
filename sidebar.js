@@ -1091,6 +1091,7 @@ document.addEventListener("DOMContentLoaded", () =>
     document.getElementById("contextmenu-action-tab-restore-closed").addEventListener("click", (e) => { utils.tabs.restoreLastClosedTab(); });
     document.getElementById("contextmenu-action-tab-bookmark-all").addEventListener("click", (e) => { let bookmarkFolderName = window.prompt("Name of bookmark directory:", "tabs"); utils.tabs.bookmarkAllVisibleTabs(contextmenuTarget, bookmarkFolderName); });
     document.getElementById("contextmenu-action-tab-reload-all").addEventListener("click", (e) => { utils.tabs.reloadAllVisibleTabs(); });
+    document.getElementById("contextmenu-action-tab-shuffle-all").addEventListener("click", (e) => { utils.tabs.shuffleAllVisibleTabs(); });
     document.getElementById("contextmenu-action-tab-close-below").addEventListener("click", (e) => { utils.tabs.closeTabsRelativeTo(contextmenuTarget, "below"); });
     document.getElementById("contextmenu-action-tab-close-above").addEventListener("click", (e) => { utils.tabs.closeTabsRelativeTo(contextmenuTarget, "above"); });
     document.getElementById("contextmenu-action-tab-close-others").addEventListener("click", (e) => { utils.tabs.closeTabsRelativeTo(contextmenuTarget, "others"); });

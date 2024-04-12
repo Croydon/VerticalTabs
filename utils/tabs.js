@@ -132,6 +132,21 @@ utils["tabs"] = class tabutils
         });
     }
 
+    static async shuffleAllVisibleTabs()
+    {
+        const tabs = [
+            ...(
+                await browser.windows.getCurrent({
+                    windowTypes: ["normal"],
+                    populate: true
+                })
+            ).tabs
+        ];
+
+        tabs.sort(() => Math.random() - 0.5);
+        tabs.forEach((tab, index) => void browser.tabs.move(tab.id, { index }));
+    }
+
     static bookmarkAllVisibleTabs(e, name)
     {
         if(name == null)
