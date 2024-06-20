@@ -197,9 +197,15 @@ utils["tabs"] = class tabutils
         let closeTheseTabs = [];
         for(let tab of window.document.querySelectorAll(".tabbrowser-tab"))
         {
-            if(tab.style.display == "none") { continue; }
-
             let currentTabID = this.getIDFromHTMLID(tab.id);
+            let pinned = tab.getAttribute("pinned");
+
+            if(tab.style.display == "none"
+               || pinned == "true")
+            {
+                continue;
+            }
+
             let currentTabIndex = this.getIndexFrom(currentTabID);
 
             if((relativeTyp == "below" && currentTabIndex > tabIndex)
