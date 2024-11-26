@@ -99,6 +99,10 @@
 				"label": "Light (recommended)"
 			},
 			{
+				"value": "system",
+				"label": "Follow System Theme"
+			},
+			{
 				"value": "darwin",
 				"label": "Darwin"
 			},

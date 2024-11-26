@@ -1,0 +1,2 @@
+@import "../light/index.css" (prefers-color-scheme: light);
+@import "../dark/index.css" (prefers-color-scheme: dark);
